@@ -1,0 +1,29 @@
+.productContainer{
+  width: 200px;
+  margin: 0 10px;
+}
+.productContainer .productImgContainer{
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px auto;
+}
+.productContainer .productImgContainer img{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.productInfo{
+  text-align: center;
+  font-size: 14px;
+}
+.productPrice{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.button{
+  margin: 0;
+  padding: 5px 18px;
+}

@@ -1,0 +1,26 @@
+.caContainer{
+  width: 250px;
+  margin: 10px;
+}
+.caContainer a:hover{
+  color: black;
+}
+.caImgContainer{
+  width: 240px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.caImgContainer > img{
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 0.5rem;
+}
+.caProductName{
+  font-size: 14px;
+  padding: 10px 0;
+}
+.caProductPrice{
+  font-size: 14px;
+  font-weight: 600;
+}
