@@ -212,7 +212,7 @@ const Header = (props) => {
       <div className="subHeader">
         {/* Logo  */}
         <div className="logo">
-          <a href="">
+          <a href="/">
             <img src={flipkartLogo} className="logoimage" alt="" />
           </a>
           <a style={{ marginTop: "-10px" }}>
