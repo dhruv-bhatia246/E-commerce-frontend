@@ -28,7 +28,7 @@ const ProductPage = (props) => {
   }, []);
 
   return(
-    <div style={{ margin:"0 10px" }}>
+    <div style={{ margin:"5px 10px", textAlign:"center" }}>
       <h3>{page.title}</h3>
       <Carousel
         renderThumbs={() => {}}
