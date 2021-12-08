@@ -77,15 +77,18 @@ const CartPage = (props) => {
           headerRight={<div>Deliver to</div>}
           style={{ width: "calc(100% - 400px)", overflow: "hidden" }}
         >
-          {Object.keys(cartItems).map((key, index) => (
-            <CartItem
-              key={index}
-              cartItem={cartItems[key]}
-              onQuantityInc={onQuantityIncrement}
-              onQuantityDec={onQuantityDecrement}
-              onRemoveCartItem={onRemoveCartItem}
-            />
-          ))}
+          {!(cartItems // null and undefined check
+            && Object.keys(cartItems).length === 0
+            && Object.getPrototypeOf(cartItems) === Object.prototype) ?
+            Object.keys(cartItems).map((key, index) => (
+              <CartItem
+                key={index}
+                cartItem={cartItems[key]}
+                onQuantityInc={onQuantityIncrement}
+                onQuantityDec={onQuantityDecrement}
+                onRemoveCartItem={onRemoveCartItem}
+              />
+            )) : <div className="empcart"><img src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png" className="cartimg" />Your cart is empty</div>}
 
           <div
             style={{
