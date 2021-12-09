@@ -6,6 +6,7 @@ import Card from "../../../components/UI/Card";
 import { Button } from "react-bootstrap";
 import Rating from "../../../components/UI/Rating";
 import Price from "../../../components/UI/Price";
+import { BiRupee } from "react-icons/bi";
 
 /**
  * @author
@@ -27,7 +28,7 @@ const ProductStore = (props) => {
       {Object.keys(product.productsByPrice).map((key, index) => {
         return (
           <Card
-            headerLeft={`${props.match.params.slug} mobile under ${priceRange[key]}`}
+            headerLeft={<p style={{fontSize:"20px", margin:"auto"}}>{props.match.params.slug} mobile under {priceRange[key]}</p>}
             headerRight={
               <Button>View All</Button>
             }

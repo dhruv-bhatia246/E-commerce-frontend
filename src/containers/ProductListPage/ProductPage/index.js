@@ -30,7 +30,7 @@ const ProductPage = (props) => {
   return(
     <div style={{ margin:"5px 10px", textAlign:"center" }}>
       <h3>{page.title}</h3>
-      <Carousel
+      <Carousel autoPlay="true" infiniteLoop="true"
         renderThumbs={() => {}}
       >
         {
