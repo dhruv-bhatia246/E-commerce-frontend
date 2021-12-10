@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductDetailsById } from "../../actions";
 import Layout from "../../components/Layout";
@@ -8,6 +8,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { addToCart } from "../../actions";
+import axios from "../../helpers/axios";
 
 /**
  * @author
@@ -17,6 +18,8 @@ import { addToCart } from "../../actions";
 const ProductDetailsPage = (props) => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
+  const [dispImg, setDispImg] = useState('');
+  const [category, setCategory] = useState('');
 
   useEffect(() => {
     const { productId } = props.match.params;
@@ -28,6 +31,18 @@ const ProductDetailsPage = (props) => {
     };
     dispatch(getProductDetailsById(payload));
   }, []);
+
+  useEffect(async () => {
+    if (product.productDetails.productPictures !== undefined) {
+      setDispImg(product.productDetails.productPictures[0].img)
+    }
+    if(product.productDetails.category !== undefined){
+      axios.post('/category/getcategoryname', {category: product.productDetails.category}).then((res) => {
+        setCategory(res.data.name);
+      })
+    }
+  }, [product])
+
 
   if (Object.keys(product.productDetails).length === 0) {
     return null;
@@ -41,14 +56,14 @@ const ProductDetailsPage = (props) => {
           <div className="verticalImageStack">
             {product.productDetails.productPictures.map((thumb, index) => (
               <div className="thumbnail">
-                <img src={thumb.img} alt={thumb.img} />
+                <img src={thumb.img} alt={thumb.img} onMouseOver={() => setDispImg(thumb.img)} />
               </div>
             ))}
           </div>
           <div className="productDescContainer">
             <div className="productDescImgContainer">
               <img
-                src={product.productDetails.productPictures[0].img}
+                src={dispImg}
                 alt={`${product.productDetails.productPictures[0].img}`}
               />
             </div>
@@ -100,7 +115,7 @@ const ProductDetailsPage = (props) => {
                 <IoIosArrowForward />
               </li>
               <li>
-                <a href="#">Samsung</a>
+                <a href="#">{category}</a>
                 <IoIosArrowForward />
               </li>
               <li>
