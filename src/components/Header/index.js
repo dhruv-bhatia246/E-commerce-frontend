@@ -215,7 +215,7 @@ const Header = (props) => {
           <a href="/">
             <img src={flipkartLogo} className="logoimage" alt="" />
           </a>
-          <a style={{ marginTop: "-10px" }}>
+          <a href="/" style={{ marginTop: "-10px" }}>
             <span className="exploreText">Explore</span>
             <span className="plusText">Plus</span>
             <img src={goldenStar} className="goldenStar" alt="" />

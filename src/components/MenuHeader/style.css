@@ -52,6 +52,13 @@
   font-size: 12px;
   z-index: 2;
 }
+.menuHeader > ul > li > ul > li a:hover{
+  color: #2874f0;
+}
+.menuHeader > ul > li > ul > li > a:hover{
+  color: black;
+  cursor: auto;
+}
 .menuHeader > ul > li > ul > li a{
   padding: 3px 0;
   display: block;
