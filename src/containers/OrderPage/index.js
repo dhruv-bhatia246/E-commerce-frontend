@@ -22,8 +22,6 @@ const OrderPage = (props) => {
     dispatch(getOrders());
   }, []);
 
-  console.log(user);
-
   function toTitleCase(str) {
     return str.replace(
       /\w\S*/g,
@@ -44,7 +42,7 @@ const OrderPage = (props) => {
           ]}
           breedIcon={<IoIosArrowForward />}
         />
-        {user.orders.map((order) => {
+        {user.orders.length !== 0 ? user.orders.map((order) => {
           return order.items.map((item) => (
             <Card style={{ display: "block", margin: "5px 0" }}>
               <Link
@@ -68,7 +66,11 @@ const OrderPage = (props) => {
               </Link>
             </Card>
           ));
-        })}
+        }) : 
+        <Card style={{ display: "block", margin: "5px 0" }}>
+          <div className="no-order">No Orders Found</div>
+        </Card>
+        }
       </div>
     </Layout>
   );

@@ -12,6 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { login, signout, getCartItems, signup as _signup } from "../../actions";
 import Cart from "../UI/Cart";
+import { Redirect } from "react-router-dom";
 
 /**
  * @author
@@ -56,6 +57,7 @@ const Header = (props) => {
 
   const logout = () => {
     dispatch(signout());
+    window.location.href="/";
   };
 
   useEffect(() => {

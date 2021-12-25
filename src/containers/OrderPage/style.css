@@ -40,3 +40,8 @@ a{
   align-items: flex-start;
   font-size: 14px;
 }
+.no-order{
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+}
