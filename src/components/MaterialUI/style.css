@@ -1,3 +1,4 @@
+/* Material Modal */
 .modalFixedBg{
   position: fixed;
   top: 0;
@@ -109,6 +110,10 @@ border-radius: 2px;
 }
 .headerDropdownContainer:hover .dropdown{
   display: block;
+}
+.dropdown:hover{
+  display: block;
+  z-index: 3;
 }
 .upArrowContainer{
   position: relative;

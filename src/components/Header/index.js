@@ -130,7 +130,7 @@ const Header = (props) => {
                 setLoginModal(true);
                 setSignup(true);
               }}
-              style={{ color: "#2874f0" }}
+              style={{ color: "#2874f0", cursor:"pointer" }}
             >
               Sign Up
             </a>
