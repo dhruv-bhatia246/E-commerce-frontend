@@ -1,26 +1,27 @@
-.caContainer{
+.caContainer {
   width: 250px;
   margin: 10px;
+  text-align: center;
 }
-.caContainer a:hover{
+.caContainer a:hover {
   color: black;
 }
-.caImgContainer{
+.caImgContainer {
   width: 240px;
   height: 300px;
   overflow: hidden;
   position: relative;
 }
-.caImgContainer > img{
+.caImgContainer > img {
   max-width: 100%;
   max-height: 300px;
   margin-top: 0.5rem;
 }
-.caProductName{
+.caProductName {
   font-size: 14px;
   padding: 10px 0;
 }
-.caProductPrice{
+.caProductPrice {
   font-size: 14px;
   font-weight: 600;
 }
