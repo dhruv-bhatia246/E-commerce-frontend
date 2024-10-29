@@ -1,4 +1,4 @@
-const baseURL = "https://e-commerce-rest-backend.herokuapp.com";
+const baseURL = "https://e-commerce-backend-umber-iota.vercel.app/";
 // const baseURL = "http://localhost:2000";
   
 export const api = `${baseURL}/api`;
