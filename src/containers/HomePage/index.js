@@ -12,8 +12,7 @@ const HomePage = (props) => {
   return (
     <>
       <Layout />
-      <Tilt className="Tilt shadow-2 br2" options={{ max: 10 }} style={{ width: "80%", padding: "10px", margin: " 50px auto", background: "linear-gradient(180deg, rgba(251,250,181,1) 0%, rgba(175,244,213,1) 50%, rgba(255,149,160,1) 100%)", borderRadius: "10px" }} >
-        {/* <div className="main-div" > */}
+      <Tilt className="Tilt shadow-2 br2" options={{ max: 10 }} style={{ width: "80%", padding: "10px", margin: "50px auto", background: "linear-gradient(180deg, rgba(251,250,181,1) 0%, rgba(175,244,213,1) 50%, rgba(255,149,160,1) 100%)", borderRadius: "10px", boxShadow: "gray 1px 1px 5px 0px" }} >
         <p className="p1">This web application implements the basic features of Flipkart web app and in not a complete clone of it. Hence, to test the functionlity of this, you can try the following steps:</p>
         <ol>
           <li>
@@ -55,7 +54,6 @@ const HomePage = (props) => {
             To view the order, hover on Profile menu in the navbar and click on orders.
           </li>
         </ol>
-        {/* </div> */}
       </Tilt>
     </>
   )
