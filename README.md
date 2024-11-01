@@ -4,7 +4,7 @@ This is a feature-rich frontend of an e-commerce web application inspired by Fli
 
 ## Live Link:
 
-[https://flipkart-web-app.herokuapp.com/](https://e-commerce-frontend-steel.vercel.app/)
+https://e-commerce-frontend-steel.vercel.app/
 
 ## Screenshots:
 
